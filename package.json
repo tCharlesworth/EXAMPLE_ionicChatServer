@@ -1,0 +1,19 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mongojs": "^2.3.0",
+    "mongoose": "^4.4.4"
+  }
+}
