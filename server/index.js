@@ -5,7 +5,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 //Mongo setup
-var db = mongojs('ionicChat', ['Chat']);
+var db = mongojs('mongodb://localhost:27017/ionicChat', ['Chat']);
 db.on('connect', function() {
     console.log('database connected');
 })
