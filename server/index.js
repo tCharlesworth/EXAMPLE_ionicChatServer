@@ -4,22 +4,12 @@ var express = require('express'),
     mongojs = require('mongojs'),
     bodyParser = require('body-parser');
 
-//Mongoose setup
-// var Chat = require('./models/chat.js');
-// mongoose.connect(config.mongoURI);
-// mongoose.connection.on('open', function() {
-//     console.log('Database connected: ', config.mongoURI);
-// });
-// mongoose.connection.on('error', function(err) {
-//     console.error('Error connecting to database: ', err);
-// });
+//Mongo setup
 var db = mongojs('ionicChat', ['Chat']);
 db.on('connect', function() {
     console.log('database connected');
 })
 //Endpoints
-var chatCtrl = require('./controllers/chatCtrl.js');
-
 var app = express();
 app.use(bodyParser.json());
 
