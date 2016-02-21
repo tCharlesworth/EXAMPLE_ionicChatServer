@@ -8,7 +8,10 @@ var express = require('express'),
 var db = mongojs('mongodb://localhost:27017/ionicChat', ['Chat']);
 db.on('connect', function() {
     console.log('database connected');
-})
+});
+db.on('error', function(err) {
+    console.error('database error: ', err);
+});
 //Endpoints
 var app = express();
 app.use(bodyParser.json());
